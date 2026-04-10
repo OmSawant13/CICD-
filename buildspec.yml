@@ -1,19 +1,15 @@
 version: 0.2
- 
+
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - node -v
-      - npm -v
-      - cd demo && npm install --include=dev
- 
+      - npm install
+
   build:
     commands:
-      - cd demo && npm run build
- 
+      - npm run build
+
 artifacts:
   files:
     - "**/*"
-  base-directory: demo/dist
+  base-directory: dist
