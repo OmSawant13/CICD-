@@ -2,8 +2,12 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - npm install
+      - node -v
+      - npm -v
+      - npm install --include=dev
 
   build:
     commands:
@@ -12,4 +16,4 @@ phases:
 artifacts:
   files:
     - "**/*"
-  base-directory: build
+  base-directory: dist
